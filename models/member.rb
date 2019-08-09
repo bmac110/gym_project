@@ -10,14 +10,14 @@ class Member
     @first_name = options["first_name"]
     @last_name = options["last_name"]
     @email = options["email"]
-    @phone = options["phone"].to_i()
+    @phone = options["phone"]
     @membership = options["membership"]
   end
 
   def save()
     sql = "INSERT INTO members (first_name, last_name, email, phone, membership)
     VALUES ($1, $2, $3, $4, $5) RETURNING id"
-    values = [@name, @email, @phone]
+    values = [@first_name, @last_name, @email, @phone, @membership ]
     results = SqlRunner.run(sql, values)
     @id = results.first()["id"].to_i()
   end
