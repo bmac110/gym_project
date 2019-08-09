@@ -2,6 +2,9 @@ require_relative("../db/sql_runner.rb")
 
 class Member
 
+  attr_accessor :name, :email, :phone
+  attr_reader :id
+
   def initialize(options)
     @id = options["id"].to_i if options["id"]
     @name = options["name"]
@@ -15,4 +18,5 @@ class Member
     results = SqlRunner.run(sql, values)
     @id = results.first()["id"].to_i()
   end
-  
+
+end
