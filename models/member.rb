@@ -14,6 +14,11 @@ class Member
     @membership = options["membership"]
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM members"
+    SqlRunner.run(sql)
+  end
+
   def save()
     sql = "INSERT INTO members (first_name, last_name, email, phone, membership)
     VALUES ($1, $2, $3, $4, $5) RETURNING id"
@@ -22,10 +27,7 @@ class Member
     @id = results.first()["id"].to_i()
   end
 
-  def self.delete_all()
-    sql = "DELETE FROM members"
-    SqlRunner.run(sql)
-  end
+
 
   def self.all()
     sql = "SELECT * FROM members"
