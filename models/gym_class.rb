@@ -2,18 +2,26 @@ require_relative("../db/sql_runner.rb")
 
 class GymClass
 
+  attr_accessor :title, :instructor, :capacity, :start_time
+  attr_reader :id
+
   def initialize(options)
     @id = options["id"].to_i() if options["id"]
     @title = options["title"]
     @instructor = options["instructor"]
     @capacity = options["capacity"]
-    @class_time = options["class_time"]
+    @start_time = options["start_time"]
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM gym_classes"
+    SqlRunner.run(sql)
   end
 
   def save()
-    sql = "INSERT INTO gym_classes (title, instructor, capacity, class_time)
+    sql = "INSERT INTO gym_classes (title, instructor, capacity, start_time)
     VALUES ($1, $2, $3, $4) RETURNING id"
-    values = [@title, @instructor, @capacity, @class_time]
+    values = [@title, @instructor, @capacity, @start_time]
     results = SqlRunner.run(sql, values)
     @id = results.first()["id"].to_i()
   end
@@ -32,9 +40,9 @@ class GymClass
   end
 
   def update()
-    sql = "UPDATE gym_classes SET (title, instructor, capacity, class_time)
+    sql = "UPDATE gym_classes SET (title, instructor, capacity, start_time)
     = ($1, $2, $3, $4) WHERE id = $5"
-    values = [@title, @instructor, @capacity, @class_time, @id]
+    values = [@title, @instructor, @capacity, @start_time, @id]
     SqlRunner.run(sql, values)
   end
 
