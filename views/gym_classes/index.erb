@@ -1,0 +1,9 @@
+<h1>Classes</h1>
+<hr />
+<% for gym_class in @gym_classes %>
+  <p>Title: <%= gym_class.title()%> Instructor: <%= gym_class.instructor() %>
+    Capacity: <%= gym_class.capacity %> Start Time: <%= gym_class.start_time %></p>
+
+
+<hr />
+<% end %>

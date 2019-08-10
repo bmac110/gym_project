@@ -64,4 +64,8 @@ class Member
     return results.map { |gymclass| GymClass.new(gymclass) }
   end
 
+  def format_name()
+    return "#{@first_name.capitalize} #{@last_name.capitalize}"
+  end
+
 end
