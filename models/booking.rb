@@ -2,8 +2,8 @@ require_relative("../db/sql_runner.rb")
 
 class Booking
 
-  attr_accessor :member_id, :gym_class_id
-  attr_reader :id
+
+  attr_reader :id, :member_id, :gym_class_id
 
   def initialize(options)
     @id = options["id"].to_i() if options["id"]
@@ -48,6 +48,20 @@ class Booking
     sql = "DELETE FROM bookings WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
+  end
+
+  def gym_class()
+    sql = "SELECT * FROM gym_classes WHERE id = $1"
+    values = [@gym_class_id]
+    results = SqlRunner.run(sql, values)
+    return GymClass.new(results.first())
+  end
+
+  def member()
+    sql = "SELECT * FROM members WHERE id = $1"
+    values = [@member_id]
+    results = SqlRunner.run(sql, values)
+    return Member.new(results.first())
   end
 
 end
