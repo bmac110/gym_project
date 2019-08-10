@@ -5,6 +5,6 @@ require_relative("controllers/gym_classes_controller.rb")
 require_relative("controllers/bookings_controller.rb")
 also_reload("../models/*")
 
-get "/"" do
+get "/" do
   erb(:index)
 end
