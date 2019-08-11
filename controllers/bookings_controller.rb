@@ -1,4 +1,6 @@
 require_relative("../models/booking.rb")
+require_relative("../models/gym_class.rb")
+require_relative("../models/member.rb")
 
 get "/bookings" do
   @bookings = Booking.all()
@@ -6,6 +8,19 @@ get "/bookings" do
 end
 
 get "/bookings/new" do
-  @bookings = Booking.all()
+  @members = Member.all()
+  @gym_classes = GymClass.all()
   erb(:"bookings/new")
+end
+
+get "bookings/:id" do
+  @booking = Booking.find(params["id"].to_i())
+  erb(:"bookings/show")
+end
+
+
+
+post "/bookings" do
+  Booking.new(params).save()
+  redirect to("/bookings")
 end

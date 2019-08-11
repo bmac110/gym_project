@@ -56,7 +56,7 @@ class GymClass
     sql = "SELECT m.* FROM members m INNER JOIN bookings b ON b.member_id = m.id WHERE b.gym_class_id = $1;"
     values = [@id]
     results = SqlRunner.run(sql, values)
-    return results.map { |victim| Victim.new(victim) }
+    return results.map { |member| Member.new(member) }
   end
 
 end
