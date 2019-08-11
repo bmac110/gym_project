@@ -3,7 +3,12 @@
 <% for gym_class in @gym_classes %>
   <p>Title: <%= gym_class.title()%> Instructor: <%= gym_class.instructor() %>
     Capacity: <%= gym_class.capacity %> Start Time: <%= gym_class.start_time %></p>
-
+    <form action="/gym_classes/<%= gym_class.id%>/delete" method="POST">
+      <input type="submit" value="Delete Class">
+    </form>
+    <form action="/gym_classes/<%= gym_class.id%>" method="get">
+      <input type="submit" value="View Details">
+    </form>
 
 <hr />
 <% end %>

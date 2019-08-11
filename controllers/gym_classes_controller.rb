@@ -19,3 +19,9 @@ post "/gym_classes" do
   GymClass.new(params).save()
   redirect to("/gym_classes")
 end
+
+post "/gym_classes/:id/delete" do
+  gym_class = GymClass.find(params["id"])
+  gym_class.delete()
+  redirect to("/gym_classes")
+end
