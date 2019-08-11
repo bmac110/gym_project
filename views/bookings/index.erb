@@ -1,7 +1,9 @@
 <h1>Bookings</h1>
 <hr />
 <% for booking in @bookings %>
-<p>Member: <%= booking.member.format_name %></p>
-<p>Instructor: <%= booking.gym_class.instructor %></p>
-<p></p>
+<p>Title: <%= booking.gym_class.title %></p>
+<!-- <p>Member: <%= booking.member.format_name %></p> -->
+<!-- <p>Instructor: <%= booking.gym_class.instructor %></p> -->
+<!-- <p>Capacity: </p> -->
+<p>Start Time: </p>
 <% end %>

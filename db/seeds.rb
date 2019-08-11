@@ -15,7 +15,17 @@ member1 = Member.new({
   "membership" => "standard"
   })
 
+member2 = Member.new({
+  "first_name" => "Dennis",
+  "last_name" => "Reynolds",
+  "email" => "goldengod@net.com",
+  "phone" => "07441107653",
+  "membership" => "standard"
+  })
+
+
 member1.save()
+member2.save()
 
 gym_class1 = GymClass.new({
   "title" => "Zumba",
@@ -31,8 +41,13 @@ booking1 = Booking.new({
   "gym_class_id" => gym_class1.id
   })
 
-booking1.save()
+booking2 = Booking.new({
+  "member_id" => member2.id,
+  "gym_class_id" => gym_class1.id
+  })
 
+booking1.save()
+booking2.save()
 
 binding.pry
 nil
