@@ -1,0 +1,9 @@
+<h3>Member Details</h3>
+<p>Title: <%= @gym_class.title() %></p>
+<p>Instructor: <%= @gym_class.instructor %> </p>
+<p>Capacity: <%= @gym_class.capacity %></p>
+<p>Start Time: <%= @gym_class.start_time %></p>
+
+<form action="/gym_classes/<%= @gym_class.id%>/delete" method="POST">
+  <input type="submit" value="Delete Class">
+</form>
