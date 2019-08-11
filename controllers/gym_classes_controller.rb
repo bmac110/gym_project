@@ -5,7 +5,17 @@ get "/gym_classes" do
   erb (:"gym_classes/index")
 end
 
+get "/gym_classes/new" do
+  @gym_classes = GymClass.all()
+  erb(:"gym_classes/new")
+end
+
 get "/gym_classes/:id" do
-  @gym_classes = GymClass.find(params["id"].to_i()) #could be @gym_class
+  @gym_class = GymClass.find(params["id"].to_i()) #could be @gym_class
   erb (:"gym_classes/show")
+end
+
+post "/gym_classes" do
+  GymClass.new(params).save()
+  redirect to("/gym_classes")
 end
