@@ -1,0 +1,20 @@
+<h1>Edit Member</h1>
+
+<form action="/members/<%=@member.id%>" method="POST">
+  <label for="first_name">First Name:</label>
+  <input required type="text" id="first_name" name="first_name" value="<%=@member.first_name%>">
+
+  <label for="last_name">Last Name:</label>
+  <input required type="text" id="last_name" name="last_name" value="<%=@member.last_name%>">
+
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email" value="<%=@member.email%>">
+
+  <label for="phone">Phone No:</label>
+  <input type="text" id="phone" name="phone" value="<%= @member.phone %>">
+
+  <label for="membership">Membership Type:</label>
+  <input type="text" id="membership" name="membership" value="<%=@member.membership%>">
+
+  <input type="submit" value="Update Member Info">
+</form>
