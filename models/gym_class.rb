@@ -9,7 +9,7 @@ class GymClass
     @id = options["id"].to_i() if options["id"]
     @title = options["title"]
     @instructor = options["instructor"]
-    @capacity = options["capacity"]
+    @capacity = options["capacity"].to_i()
     @start_time = options["start_time"]
   end
 
@@ -58,5 +58,17 @@ class GymClass
     results = SqlRunner.run(sql, values)
     return results.map { |member| Member.new(member) }
   end
+
+  def class_full()
+    @gym_class = GymClass.all()
+    for gym_class in @gym_class
+      if gym_class.members.count < @capacity
+        return true
+      else
+        return false
+      end
+    end
+  end
+
 
 end

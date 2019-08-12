@@ -10,14 +10,21 @@ end
 get "/bookings/new" do
   @members = Member.all()
   @gym_classes = GymClass.all()
+  @bookings = Booking.all()
+  # @capacity = Booking.count(id)
   erb(:"bookings/new")
 end
 
-get "bookings/:id" do
+get "/bookings/:id" do
   @booking = Booking.find(params["id"].to_i())
   erb(:"bookings/show")
 end
 
+post "/bookings/:id/delete" do
+  booking = Booking.find(params["id"])
+  booking.delete()
+  redirect to("/bookings")
+end
 
 
 post "/bookings" do

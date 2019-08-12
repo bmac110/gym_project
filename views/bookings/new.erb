@@ -3,24 +3,36 @@
     Select a Member:
     <select name="member_id">
       <% for member in @members %>
+       <% if member.membership == "Premium" %>
           <option value="<%= member.id %>"><%= member.format_name %></option>
-
+      <% end %>
       <% end %>
     </select>
   </label>
+
+  <% def member_count() %>
+    <% @gym_classes.members.count %>
+  <% end %>
 
   <label>
     Select a Class:
+
     <select name="gym_class_id">
       <% for gym_class in @gym_classes %>
-        <% if gym_class.members.count < gym_class.capacity %>
-          <option value="<%= gym_class.id %>"><%= gym_class.title %></option>
-        <%else%>
-           <% return false %>
+          <% if Booking.class_full(gym_class.id) < gym_class.capacity %>
+
+            <option value="<%= gym_class.id %>"><%= gym_class.title + " " + gym_class.start_time %></option>
+
+
         <% end %>
-      <% end %>
+        <% end %>
+
+
+
     </select>
   </label>
+
+
 
   <input type="submit" value="Book">
 

@@ -14,7 +14,13 @@
   <input type="text" id="phone" name="phone">
 
   <label for="membership">Membership Type:</label>
-  <input type="text" id="membership" name="membership">
+  <select name="membership">
+    <% for membership in @membership %>
+        <option value="<%= membership %>"><%= membership %></option>
+
+    <% end %>
+  </select>
+
 
   <input type="submit" value="Add New Member">
 </form>

@@ -12,7 +12,7 @@ member1 = Member.new({
   "last_name" => "Macdonald",
   "email" => "macgains@net.com",
   "phone" => "07445507653",
-  "membership" => "standard"
+  "membership" => "Standard"
   })
 
 member2 = Member.new({
@@ -20,7 +20,7 @@ member2 = Member.new({
   "last_name" => "Reynolds",
   "email" => "goldengod@net.com",
   "phone" => "07441107653",
-  "membership" => "standard"
+  "membership" => "Standard"
   })
 
 member3 = Member.new({
@@ -28,7 +28,7 @@ member3 = Member.new({
   "last_name" => "Reynolds",
   "email" => "giantbird@net.com",
   "phone" => "07351107653",
-  "membership" => "standard"
+  "membership" => "Standard"
   })
 
 member1.save()
@@ -38,14 +38,14 @@ member3.save()
 gym_class1 = GymClass.new({
   "title" => "Zumba",
   "instructor" => "Laura",
-  "capacity" => "25",
+  "capacity" => 25,
   "start_time" => "18:00"
   })
 
 gym_class2 = GymClass.new({
   "title" => "Circuits",
   "instructor" => "Rickety Cricket",
-  "capacity" => "25",
+  "capacity" => 25,
   "start_time" => "19:00"
   })
 
@@ -65,5 +65,5 @@ booking2 = Booking.new({
 booking1.save()
 booking2.save()
 
-binding.pry
-nil
+# binding.pry
+# nil

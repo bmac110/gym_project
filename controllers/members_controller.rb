@@ -10,6 +10,7 @@ end
 
 get "/members/new" do
   @members = Member.all()
+  @membership = ["Standard", "Premium"]
   erb (:"members/new")
 end
 

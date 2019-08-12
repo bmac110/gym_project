@@ -15,7 +15,7 @@ CREATE TABLE gym_classes (
   id SERIAL PRIMARY KEY,
   title VARCHAR(255),
   instructor VARCHAR(255),
-  capacity VARCHAR(255),
+  capacity INT,
   start_time VARCHAR(255)
 );
 

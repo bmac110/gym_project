@@ -11,7 +11,7 @@ get "/gym_classes/new" do
 end
 
 get "/gym_classes/:id" do
-  @gym_class = GymClass.find(params["id"].to_i()) #could be @gym_class
+  @gym_class = GymClass.find(params["id"].to_i())
   erb (:"gym_classes/show")
 end
 
