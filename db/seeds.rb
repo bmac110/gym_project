@@ -23,9 +23,17 @@ member2 = Member.new({
   "membership" => "standard"
   })
 
+member3 = Member.new({
+  "first_name" => "Dee",
+  "last_name" => "Reynolds",
+  "email" => "giantbird@net.com",
+  "phone" => "07351107653",
+  "membership" => "standard"
+  })
 
 member1.save()
 member2.save()
+member3.save()
 
 gym_class1 = GymClass.new({
   "title" => "Zumba",
@@ -34,7 +42,15 @@ gym_class1 = GymClass.new({
   "start_time" => "18:00"
   })
 
+gym_class2 = GymClass.new({
+  "title" => "Circuits",
+  "instructor" => "Rickety Cricket",
+  "capacity" => "25",
+  "start_time" => "19:00"
+  })
+
 gym_class1.save()
+gym_class2.save()
 
 booking1 = Booking.new({
   "member_id" => member1.id,

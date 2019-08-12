@@ -3,7 +3,8 @@
     Select a Member:
     <select name="member_id">
       <% for member in @members %>
-      <option value="<%= member.id %>"><%= member.format_name %></option>
+          <option value="<%= member.id %>"><%= member.format_name %></option>
+
       <% end %>
     </select>
   </label>
@@ -12,7 +13,11 @@
     Select a Class:
     <select name="gym_class_id">
       <% for gym_class in @gym_classes %>
-      <option value="<%= gym_class.id %>"><%= gym_class.title %></option>
+        <% if gym_class.members.count < gym_class.capacity %>
+          <option value="<%= gym_class.id %>"><%= gym_class.title %></option>
+        <%else%>
+           <% return false %>
+        <% end %>
       <% end %>
     </select>
   </label>

@@ -8,6 +8,11 @@
   <input type="submit" value="Delete Class">
 </form>
 
-<% @gym_class.members.each do |member| %>
+<% def member_count() %>
+  <% @gym_class.members.count %>
+<% end %>
+
+
+<% for member in @gym_class.members %>
   <li><%= member.format_name %></li>
 <% end %>
