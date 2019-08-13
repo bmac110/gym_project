@@ -4,23 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <div>
+    <title>Document</title>
+  </div>
+  <link rel="stylesheet" type="text/css" href="/styles/dashboard.css">
 </head>
 <body>
-<main>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/members">All Members</a></li>
-      <li><a href="/gym_classes">All Classes</a></li>
-      <li><a href="/bookings">All Bookings</a></li>
-      <li><a href="/members/new">Add Member</a></li>
-    </ul>
-  </nav>
+  <div class="flex-grid">
+    <div class="topbar"></div>
+      <div>
 
+      </div>
+
+  <h1 class="gainsbury">Gainsburys</h1>
+  <!-- <div class="sidebox"> -->
+
+
+
+
+
+    <nav class="sidenav">
+
+      <a class="home" href="/">Home</a>
+      <a href="/members">All Members</a>
+      <a href="/gym_classes">All Classes</a>
+      <a href="/bookings">All Bookings</a>
+      <a href="/members/new">Add Member</a>
+
+    </nav>
+  <main>
   <%= yield %>
+  <!-- </div> -->
+  </main>
 
-</main>
-
+<!-- <div class="col"></div>
+<div class="col"></div> -->
 </body>
 </html>
