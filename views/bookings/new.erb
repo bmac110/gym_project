@@ -3,9 +3,9 @@
     Select a Member:
     <select name="member_id">
       <% for member in @members %>
-       <% if member.membership == "Premium" %>
+        <% if member.membership == "Premium" %>
           <option value="<%= member.id %>"><%= member.format_name %></option>
-      <% end %>
+        <% end %>
       <% end %>
     </select>
   </label>
@@ -16,19 +16,13 @@
 
   <label>
     Select a Class:
-
     <select name="gym_class_id">
       <% for gym_class in @gym_classes %>
           <% if Booking.class_full(gym_class.id) < gym_class.capacity %>
-
-            <option value="<%= gym_class.id %>"><%= gym_class.title + " " + gym_class.start_time %></option>
-
-
+            <option value="<%= gym_class.id %>"><%= gym_class.title + " "
+              + gym_class.start_time %></option>
         <% end %>
-        <% end %>
-
-
-
+      <% end %>
     </select>
   </label>
 

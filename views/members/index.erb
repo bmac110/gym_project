@@ -1,12 +1,13 @@
+<div id="" style="overflow:scroll; height:30em; width:45em;">
 <h1>Members</h1>
 <hr />
 <% for member in @members %>
-  <p>Name: <%= member.format_name()%> Email: <%= member.email() %>
-    Phone No: <%= member.phone %> Membership Status: <%= member.membership %> </p>
-<form action="/members/<%= member.id%>/delete" method="POST">
+  <p>Name: <%= member.format_name()%></p>
+  <p>Membership Status: <%= member.membership %></p>
+<form class="formside" action="/members/<%= member.id%>/delete" method="POST">
   <input type="submit" value="Delete Member">
 </form>
-<form action="/members/<%= member.id%>" method="get">
+<form class="formside" action="/members/<%= member.id%>" method="get">
   <input type="submit" value="View Details">
 </form>
   <!-- <p>Email: <%= member.email() %></p>
@@ -17,7 +18,7 @@
 
 <hr />
 <% end %>
-
+</div>
 <form action="/members/new" method="get">
   <input type="submit" value="Add Member" >
 

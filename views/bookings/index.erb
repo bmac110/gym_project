@@ -9,9 +9,10 @@
 <!-- <p>Instructor: <%= booking.gym_class.instructor %></p> -->
 <!-- <p>Capacity: </p> -->
 <p>Start Time: <%= booking.gym_class.start_time %></p>
-<form action="/bookings/<%= booking.id%>/delete" method="POST">
+<form class="formside" action="/bookings/<%= booking.id%>/delete" method="POST">
   <input type="submit" value="Delete Booking">
 </form>
+<hr />
 <% end %>
 
 </div>

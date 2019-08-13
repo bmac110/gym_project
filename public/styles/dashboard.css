@@ -2,6 +2,47 @@
 
 } */
 
+input {
+
+background: orange;
+
+color: white;
+
+border-style: outset;
+
+/* border-color: #0066A2; */
+
+height: 25px;
+
+width: 20px;
+
+font: bold 15px arial, sans-serif;
+
+text-shadow:none;
+
+}
+
+.formside {
+  left: 20em;
+  text-align: right;
+}
+
+input {
+  width: 10em;
+}
+
+h3 {
+  font-family: "futura"
+}
+
+label {
+  font-family: "helvetica";
+}
+
+p {
+  font-family: "helvetica";
+}
+
 .topbar {
   /* border-top: 10em solid orange; */
   position: fixed;
@@ -26,8 +67,7 @@
   font-family: "din alternate";
   /* font-weight: bold; */
   font-size: 3.5em;
-  text-shadow: 3px 3px 0px rgba(63,107,169, 0.5)
-
+  text-shadow: 4px 4px 0px rgba(130,80,0, 0.5)
 }
 
 .flex-grid {
