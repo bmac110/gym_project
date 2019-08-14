@@ -2,92 +2,12 @@
 
 } */
 
-.tmembers {
-
-  left: 20em;
-
-  background: orange;
-
-  color: white;
-
-  border-style: outset;
-
-  height: 2.3em;
-
-  width: 6em;
-
-  font: bold 25px arial, sans-serif;
-
-  text-shadow:none;
-
-}
-
-.tclasses {
-
-  left: 20em;
-
-  background: orange;
-
-  color: white;
-
-  border-style: outset;
-
-  height: 2.3em;
-
-  width: 6em;
-
-  font: bold 25px arial, sans-serif;
-
-  text-shadow:none;
-
-}
-
-.tbookings {
-
-  left: 20em;
-
-  background: orange;
-
-  color: white;
-
-  border-style: outset;
-
-  height: 2.3em;
-
-  width: 6em;
-
-  font: bold 25px arial, sans-serif;
-
-  text-shadow:none;
-
-}
-
-input {
-
-background: orange;
-
-color: white;
-
-border-style: outset;
-
-height: 25px;
-
-width: 20px;
-
-font: bold 15px arial, sans-serif;
-
-text-shadow:none;
-
-}
-
 .formside {
   left: 20em;
   text-align: right;
 }
 
-input {
-  width: 10em;
-}
+
 
 h3 {
   font-family: "futura"
@@ -112,7 +32,6 @@ p {
   height: 8em;
   background-color: orange;
   box-shadow: 5px 5px 3px rgba(63,107,169, 0.8) ;
-  /* border-bottom: 0.3em solid white; */
 }
 
 .gainsbury {
@@ -139,7 +58,7 @@ ul li {
 
 main {
   left: 18em;
-  position: fixed;
+  position: relative;
   overflow: scroll;
   margin-top: 10em;
   z-index: 1;

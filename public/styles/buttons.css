@@ -1,0 +1,81 @@
+.tbookings {
+
+  left: 20em;
+
+  background: orange;
+
+  color: white;
+
+  border-style: outset;
+
+  height: 2.3em;
+
+  width: 6em;
+
+  font: bold 25px arial, sans-serif;
+
+  text-shadow:none;
+
+}
+
+.tclasses {
+
+  left: 20em;
+
+  background: orange;
+
+  color: white;
+
+  border-style: outset;
+
+  height: 2.3em;
+
+  width: 6em;
+
+  font: bold 25px arial, sans-serif;
+
+  text-shadow:none;
+
+}
+
+.tmembers {
+
+  left: 20em;
+
+  background: orange;
+
+  color: white;
+
+  border-style: outset;
+
+  height: 2.3em;
+
+  width: 6em;
+
+  font: bold 25px arial, sans-serif;
+
+  text-shadow:none;
+
+}
+
+input {
+
+background: orange;
+
+color: white;
+
+border-style: outset;
+
+height: 25px;
+
+width: 20px;
+
+font: bold 15px arial, sans-serif;
+
+text-shadow:none;
+
+}
+
+input {
+  width: 10em;
+}
