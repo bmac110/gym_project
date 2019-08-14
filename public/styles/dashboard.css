@@ -10,8 +10,6 @@ color: white;
 
 border-style: outset;
 
-/* border-color: #0066A2; */
-
 height: 25px;
 
 width: 20px;
@@ -80,33 +78,12 @@ ul li {
 }
 
 main {
-  /* display: flex;
-  flex-wrap: wrap;
-  grid-column:  */
   left: 18em;
   position: fixed;
   overflow: scroll;
-  /* top: 10em; */
   margin-top: 10em;
   z-index: 1;
 }
-
-/* .sidenav {
-  display: flex;
-  font-family: "futura";
-  font-size: 1.4em;
-  color: inherit;
-  color: black;
-  position: fixed;
-  top: 7em;
-  align-content: space-between;
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
-} */
 
 .home {
   top: 1em;
@@ -114,20 +91,15 @@ main {
 }
 
 .sidenav {
-  /* display: flex; */
   height: 100%;
   width: 14em;
   position: fixed;
   z-index: 2;
   top: 9em;
   left: 0.4em;
-  /* background-color: orange; */
   overflow-x: hidden;
   padding-top: 1em;
-  /* box-shadow: 5px 5px 3px rgba(63,107,169, 0.8); */
   border-right-style: groove;
-  /* align-content: flex-start; */
-
 }
 
 .sidenav a {
@@ -137,8 +109,6 @@ main {
   font-family: "futura";
   color: #818181;
   display: block;
-
-
 }
 
 .sidenav a:hover {

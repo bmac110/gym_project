@@ -68,4 +68,10 @@ class Member
     return "#{@first_name.capitalize} #{@last_name.capitalize}"
   end
 
+  def self.count()
+    sql = "SELECT count(*) FROM members"
+    results = SqlRunner.run(sql)
+    return results.first()["count"].to_i()
+  end
+
 end

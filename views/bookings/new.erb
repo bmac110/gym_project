@@ -10,17 +10,13 @@
     </select>
   </label>
 
-  <% def member_count() %>
-    <% @gym_classes.members.count %>
-  <% end %>
-
   <label>
     Select a Class:
     <select name="gym_class_id">
       <% for gym_class in @gym_classes %>
           <% if Booking.class_full(gym_class.id) < gym_class.capacity %>
-            <option value="<%= gym_class.id %>"><%= gym_class.title + " "
-              + gym_class.start_time %></option>
+            <option value="<%= gym_class.id %>"><%= gym_class.title + " " + gym_class.start_time %></option>
+
         <% end %>
       <% end %>
     </select>

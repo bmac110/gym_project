@@ -5,7 +5,6 @@ require_relative("../models/member.rb")
 class MemberTest < MiniTest::Test
 
   def setup()
-    # @member = Member.new("Martin Porter", "martinp@net.com", 07445507653, "standard" )
     options = {"id" => 1, "first_name" => "Ronald", "last_name" => "Macdonald",
       "email" => "macgains@net.com", "phone" => "07445507653", "membership" => "standard"}
 

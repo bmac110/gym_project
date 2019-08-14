@@ -59,16 +59,8 @@ class GymClass
     return results.map { |member| Member.new(member) }
   end
 
-  def class_full()
-    @gym_class = GymClass.all()
-    for gym_class in @gym_class
-      if gym_class.members.count < @capacity
-        return true
-      else
-        return false
-      end
-    end
-  end
+  
+
 
 
 end

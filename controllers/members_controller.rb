@@ -3,6 +3,7 @@ require_relative("../models/booking.rb")
 require_relative("../models/gym_class.rb")
 # also_reload("..models/*")
 
+
 get "/members" do
   @members = Member.all()
   erb (:"members/index")

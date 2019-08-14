@@ -6,8 +6,6 @@
 <% for booking in @bookings %>
 <p>Title: <%= booking.gym_class.title %></p>
 <p>Member: <%= booking.member.format_name %></p>
-<!-- <p>Instructor: <%= booking.gym_class.instructor %></p> -->
-<!-- <p>Capacity: </p> -->
 <p>Start Time: <%= booking.gym_class.start_time %></p>
 <form class="formside" action="/bookings/<%= booking.id%>/delete" method="POST">
   <input type="submit" value="Delete Booking">
