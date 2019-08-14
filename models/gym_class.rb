@@ -59,7 +59,11 @@ class GymClass
     return results.map { |member| Member.new(member) }
   end
 
-  
+  def self.count()
+    sql = "SELECT count(*) FROM gym_classes"
+    results = SqlRunner.run(sql)
+    return results.first()["count"].to_i()
+  end
 
 
 

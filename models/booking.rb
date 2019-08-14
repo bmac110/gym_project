@@ -71,13 +71,10 @@ class Booking
     return results.first()["count"].to_i()
   end
 
-  #   for booking in @gym_class_id
-  #     if booking.count < @capacity
-  #       return true
-  #     else
-  #       return false
-  #     end
-  #   end
-  # end
+  def self.count()
+    sql = "SELECT count(*) FROM gym_classes"
+    results = SqlRunner.run(sql)
+    return results.first()["count"].to_i()
+  end
 
 end

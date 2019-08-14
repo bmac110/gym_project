@@ -2,6 +2,66 @@
 
 } */
 
+.tmembers {
+
+  left: 20em;
+
+  background: orange;
+
+  color: white;
+
+  border-style: outset;
+
+  height: 2.3em;
+
+  width: 6em;
+
+  font: bold 25px arial, sans-serif;
+
+  text-shadow:none;
+
+}
+
+.tclasses {
+
+  left: 20em;
+
+  background: orange;
+
+  color: white;
+
+  border-style: outset;
+
+  height: 2.3em;
+
+  width: 6em;
+
+  font: bold 25px arial, sans-serif;
+
+  text-shadow:none;
+
+}
+
+.tbookings {
+
+  left: 20em;
+
+  background: orange;
+
+  color: white;
+
+  border-style: outset;
+
+  height: 2.3em;
+
+  width: 6em;
+
+  font: bold 25px arial, sans-serif;
+
+  text-shadow:none;
+
+}
+
 input {
 
 background: orange;
