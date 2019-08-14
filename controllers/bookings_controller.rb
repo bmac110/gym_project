@@ -11,7 +11,6 @@ get "/bookings/new" do
   @members = Member.all()
   @gym_classes = GymClass.all()
   @bookings = Booking.all()
-  # @capacity = Booking.count(id)
   erb(:"bookings/new")
 end
 
